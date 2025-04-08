@@ -12,10 +12,10 @@ def generate_pdf_api():
         data = request.get_json()
 
         # Extraction des champs
-        main_title = data.get('main_title', 'Toi & Moi')
-        sub_title = data.get('sub_title', "Notre histoire d'amour")
-        cover_image_path = data.get('cover_image_path')
-        footer_image_path = data.get('footer_image_path')
+        main_title = data.get('main_title', '')
+        sub_title = data.get('sub_title', "")
+        cover_image_path = data.get('cover_image_path', '')
+        footer_image_path = data.get('footer_image_path', '')
         messages = data.get('messages', [])
 
         # Répertoire temporaire
